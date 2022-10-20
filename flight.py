@@ -18,11 +18,11 @@ class Flight():
 flight=Flight(3)
 
 people=["Harry","Hermoine","Ron","Ginny"]
-for persom in people:
-   if flight.add_passengers(persom):
-    print(f"Added {persom} to the flight successfully")
+for person in people:
+   if flight.add_passengers(person):
+    print(f"Added {person} to the flight successfully")
    else:
-    print(f"No available seats available for {persom}.")
+    print(f"No available seats available for {person}.")
 
 
 
