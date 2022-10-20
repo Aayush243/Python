@@ -1,0 +1,32 @@
+import re
+
+
+class Flight():
+    def __init__(self,capacity):
+        self.capacity=capacity
+        self.passengers=[]
+
+    def add_passengers(self,name):
+        if not self.open_seats():
+            return False
+        self.passengers.append(name)
+        return True
+    
+    def open_seats(self):
+        return self.capacity-len(self.passengers)
+
+flight=Flight(3)
+
+people=["Harry","Hermoine","Ron","Ginny"]
+for persom in people:
+   if flight.add_passengers(persom):
+    print(f"Added {persom} to the flight successfully")
+   else:
+    print(f"No available seats available for {persom}.")
+
+
+
+
+
+
+    
